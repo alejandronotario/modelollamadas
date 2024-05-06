@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>input</title>
+   <link rel="stylesheet" href="{{ url_for('static',
+   filename='css/template.css') }}">
+ </head>
+ <body bgcolor="#E6E6FA">
+    <header>
+      <div class="container">
+        <h1 class="logo" style="font-family:courier new; color:white;">Texto de llamada</h1>
+        <strong><nav>
+
+<br>
+<form method=post action="">
+<table>
+  {% for field in form %}
+    <tr>
+    <td>{{ field.name }}</td><td>{{ field }}</td>
+<!--
+    <td>{{ field.label }}</td>
+-->
+    </tr>
+  {% endfor %}
+</table>
+<p><input type=submit value=Compute></form></p>
+
+
+<p>
+{% if result != None %}
+
+{{result | safe}}
+{% endif %}
+</p>

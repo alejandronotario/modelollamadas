@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>simulador</title>
+   <link rel="stylesheet" href="{{ url_for('static',
+   filename='css/template.css') }}">
+ </head>
+ <body bgcolor="#E6E6FA">
+    <header>
+      <div class="container">
+        <h1 style="font-family:courier new;"class="logo"> SIMULADOR DE MODELO DE DETECCIÓN TEMPRANA DE INSATISFACCIÓN 
+          
+          <strong><nav>
+            <ul class="container">
+              <h5><a style="font-family:courier new; color:red;" href="{{ url_for('predictor') }}">RAG de OpenAI gpt-3.5-turbo</a></h5>
+          <br>
+          <br>
+              
+            </ul>
+
+
+
+      </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+ </body>
+</html>
